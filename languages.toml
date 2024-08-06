@@ -1,0 +1,31 @@
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "c-sharp"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "rust"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "zig"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "python"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "lua"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "ruby"
+indent = { tab-width = 4, unit = "\t" }

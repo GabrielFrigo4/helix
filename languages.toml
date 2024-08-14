@@ -23,6 +23,10 @@ name = "zig"
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
+name = "java"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
 name = "python"
 indent = { tab-width = 4, unit = "\t" }
 
@@ -32,6 +36,18 @@ indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "ruby"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "javascript"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "html"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "css"
 indent = { tab-width = 4, unit = "\t" }
 
 ################
@@ -56,4 +72,24 @@ indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "powershell"
+indent = { tab-width = 4, unit = "\t" }
+
+################
+# TOOLS
+################
+
+[[language]]
+name = "xml"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "yaml"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "json"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "toml"
 indent = { tab-width = 4, unit = "\t" }

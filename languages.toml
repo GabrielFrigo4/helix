@@ -43,6 +43,10 @@ name = "make"
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
+name = "cmake"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
 name = "bash"
 indent = { tab-width = 4, unit = "\t" }
 

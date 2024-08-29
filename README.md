@@ -17,3 +17,8 @@ echo -e -n "\x1b[\x30 q"
 ```bash
 apt install wl-clipboard
 ```
+
+# [xclip](https://github.com/astrand/xclip)
+```bash
+apt install xclip
+```

@@ -2,6 +2,7 @@
 # LANGUAGES
 ################
 
+
 [[language]]
 name = "c"
 indent = { tab-width = 4, unit = "\t" }
@@ -50,9 +51,15 @@ indent = { tab-width = 4, unit = "\t" }
 name = "css"
 indent = { tab-width = 4, unit = "\t" }
 
+
 ################
 # TOOLS
 ################
+
+
+[[language]]
+name = "org"
+indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "make"
@@ -74,9 +81,11 @@ indent = { tab-width = 4, unit = "\t" }
 name = "powershell"
 indent = { tab-width = 4, unit = "\t" }
 
+
 ################
-# TOOLS
+# MARKUP
 ################
+
 
 [[language]]
 name = "xml"

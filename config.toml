@@ -7,6 +7,10 @@ cursorline = true
 true-color = true
 mouse = true
 
+[editor.lsp]
+auto-signature-help = false
+enable = false
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"

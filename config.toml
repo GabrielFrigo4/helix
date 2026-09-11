@@ -15,7 +15,7 @@ true-color = true
 mouse = true
 
 ### --------------------------------
-### Language Server Protocol (LSP)
+### Language Server Protocol
 ### --------------------------------
 [editor.lsp]
 auto-signature-help = false

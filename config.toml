@@ -1,3 +1,10 @@
+# ----------------------------------------------------------------
+# Recipe: Helix Editor Configuration
+# ----------------------------------------------------------------
+
+### ================================
+### TEMA & VISUAL
+### ================================
 theme = "dark_plus"
 
 [editor]
@@ -7,10 +14,16 @@ cursorline = true
 true-color = true
 mouse = true
 
+### --------------------------------
+### Language Server Protocol (LSP)
+### --------------------------------
 [editor.lsp]
 auto-signature-help = false
 enable = false
 
+### --------------------------------
+### Cursor & File Picker
+### --------------------------------
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -19,6 +32,9 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+### ================================
+### MAPEAMENTOS DE TECLAS
+### ================================
 [keys.normal]
 del = "delete_char_forward"
 backspace = "delete_char_backward"

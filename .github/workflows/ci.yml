@@ -1,34 +1,37 @@
 name: Universal Helix CI
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  validate:
-    name: 🔍 Helix Configuration Validation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+    validate:
+        name: 🔍 Helix Configuration Validation
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v7
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+            - name: Set up Python
+              uses: actions/setup-python@v7
+              with:
+                  python-version: "3.12"
 
-      - name: Validate TOML Syntax
-        run: |
-          python3 -c "
-          import sys, tomllib
-          for f in ['config.toml', 'languages.toml']:
-              with open(f, 'rb') as fp:
-                  tomllib.load(fp)
-          print('TOML syntax is 100% valid!')
-          "
+            - name: Validate TOML Syntax
+              run: |
+                  python3 -c "
+                  import sys, tomllib
+                  for f in ['config.toml', 'languages.toml']:
+                      with open(f, 'rb') as fp:
+                          tomllib.load(fp)
+                  print('TOML syntax is 100% valid!')
+                  "

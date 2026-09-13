@@ -78,18 +78,16 @@ Remove-Item -Recurse -Force "$env:APPDATA\helix\.git*", "$env:APPDATA\helix\.age
 
 ---
 
-### ⚙️ Integração com o Universal Environment (Submódulo)
+### ⚙️ Integração com o Universal Environment
 
-Se você já utiliza o orquestrador [Universal Environment](https://github.com/GabrielFrigo4/environment):
+Quando operado a partir do [Universal Environment](https://github.com/GabrielFrigo4/environment):
 
 ```sh
-# Sincronização automática via Profile
-make sync
+# Atualizar a suíte de editores com o upstream
+make uped
 
-# Ou criação manual de links
-mkdir -p "${HOME}/.config/helix"
-ln -sf "$(pwd)/config.toml" "${HOME}/.config/helix/config.toml"
-ln -sf "$(pwd)/languages.toml" "${HOME}/.config/helix/languages.toml"
+# Implantar o repositório no destino canônico (~/.config/helix)
+make deploy
 ```
 
 ---

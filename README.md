@@ -1,4 +1,4 @@
-# 🧬 Helix Editor Configuration
+# 🧬 Universal Helix Configuration
 
 > Configuração declarativa, minimalista e ergonômica para o editor modal Helix.
 
@@ -33,10 +33,57 @@ Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo
 
 ## 🚀 Instalação e Uso Rápido
 
-### 1. Vincular via Profile
+### Opção A — Modo Versionado (Recomendado para Manutenção)
+
+Clona o repositório diretamente no destino canônico com controle de versão Git ativo, permitindo atualizações automáticas contínuas via `uped` ou `git pull`.
+
+#### 🐧 Unix (Linux, FreeBSD, macOS)
 
 ```sh
-# Sincronização automática via Universal Environment
+git clone "https://github.com/GabrielFrigo4/helix.git" "${HOME}/.config/helix"
+```
+
+#### 🪟 Windows (PowerShell Nativo)
+
+```powershell
+git clone "https://github.com/GabrielFrigo4/helix.git" "$env:APPDATA\helix"
+```
+
+#### 🪟 Windows (MSYS2 / Git Bash)
+
+```sh
+git clone "https://github.com/GabrielFrigo4/helix.git" "${HOME}/.config/helix"
+```
+
+---
+
+### Opção B — Modo Standalone Limpo (Zero-Bloat / Produção)
+
+> [!TIP]
+> **Filosofia Zero-Bloat:** Ideal para servidores, contêineres ou computadores de terceiros onde o controle de versão Git e artefatos de desenvolvimento não são necessários. Clona a árvore rasa (`--depth=1`) e remove metadados (`.git*`, `.agents`, `*.md`), deixando apenas a configuração estritamente executável.
+
+#### 🐧 Unix (Linux, FreeBSD, macOS & MSYS2)
+
+```sh
+git clone --depth=1 "https://github.com/GabrielFrigo4/helix.git" "${HOME}/.config/helix" && \
+  rm -rf "${HOME}/.config/helix/.git"* "${HOME}/.config/helix/.agents" "${HOME}/.config/helix/"*.md
+```
+
+#### 🪟 Windows (PowerShell)
+
+```powershell
+git clone --depth=1 "https://github.com/GabrielFrigo4/helix.git" "$env:APPDATA\helix"
+Remove-Item -Recurse -Force "$env:APPDATA\helix\.git*", "$env:APPDATA\helix\.agents", "$env:APPDATA\helix\*.md" -ErrorAction SilentlyContinue
+```
+
+---
+
+### ⚙️ Integração com o Universal Environment (Submódulo)
+
+Se você já utiliza o orquestrador [Universal Environment](https://github.com/GabrielFrigo4/environment):
+
+```sh
+# Sincronização automática via Profile
 make sync
 
 # Ou criação manual de links
@@ -45,7 +92,9 @@ ln -sf "$(pwd)/config.toml" "${HOME}/.config/helix/config.toml"
 ln -sf "$(pwd)/languages.toml" "${HOME}/.config/helix/languages.toml"
 ```
 
-### 2. Validação e Saúde
+---
+
+### 🩺 Validação e Saúde
 
 ```sh
 # Verificar diagnóstico completo do Helix

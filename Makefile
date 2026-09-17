@@ -13,12 +13,15 @@ MAKEFLAGS += --no-print-directory -s
 ### HELP & DOCUMENTATION
 ### ================================
 help:
-	echo "🧬 Helix — Configuração Declarativa em TOML"
+	cmd() { printf "    \033[36mmake %-22s\033[0m %s\n" "$$1" "$$2"; }; \
+	sec() { printf "\n  \033[1;33m%s\033[0m\n" "$$1"; }; \
+	printf "\n  \033[1;37mHelix — Editor Modal & Configuração Declarativa em TOML\033[0m\n"; \
+	printf "  ============================================================\n"; \
+	sec "Qualidade & Validação:"; \
+	cmd "test"           "Valida sintaxe de todos os arquivos TOML"; \
+	cmd "ci"             "Executa suíte de validação local do Helix"; \
 	echo ""
-	echo "Comandos disponíveis:"
-	echo "  make test     - Valida sintaxe de todos os arquivos TOML"
-	echo "  make ci       - Executa suite de validação local"
-	echo ""
+
 
 ### ================================
 ### TESTING & VALIDATION

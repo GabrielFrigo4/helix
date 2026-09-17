@@ -28,8 +28,7 @@ O repositório provê configurações declarativas para o editor modal moderno *
 3. **Fail-Safe Defaults:** Configurações de LSP e linters devem funcionar sem quebrar a edição básica de texto mesmo quando servidores LSP não estão no PATH.
 4. **Zero Secrets:** Nunca incluir tokens ou segredos neste repositório.
 5. **Hermetismo de Produção & Invariante `rm -rf .agents`:** Repositório 100% autônomo. Zero acoplamento de configurações a `.agents/` ou `skills/` (o Helix opera plenamente se `.agents/` for deletado).
-
----
+6. **Bancada de Desenvolvimento vs. Runtimes de Produção:** Em produção, o Helix reside e opera soberanamente em `~/.config/helix`. O repositório central `Environment` é exclusivamente uma bancada de desenvolvimento. NUNCA aponte symlinks no SO para `~/Documents/Environment/Editor/Helix`.
 
 ---
 
@@ -45,14 +44,16 @@ Se durante a execução de qualquer tarefa (seja criação de novas features, co
     - **Banners Estruturais:** Ajustar réguas para exatamente 64 hífens no topo ou 32 caracteres com `### ` no corpo.
     - **Portabilidade POSIX:** Substituir bashismos (`[[ ]]`, `&>`, arrays, `source`) por sintaxe estrita POSIX `/bin/sh`.
     - **Shebang Universal:** Garantir sempre `#!/usr/bin/env sh` ou `#!/usr/bin/env python3`.
-    - **Sequências ANSI:** Substituir octais crípticos (``) e `printf` desnecessário por `[ -t 1 ] && echo -n $'\e...'`.
+    - **Sequências ANSI:** Substituir octais crípticos (` `) e `printf` desnecessário por `[ -t 1 ] && echo -n $'\e...'`.
     - **Redirecionamento Seguro:** Envolver destinos em aspas duplas (ex: `> "/dev/null" 2>&1`).
     - **Makefiles:** Assegurar cabeçalho `.POSIX: .SILENT:`, `MAKEFLAGS += --no-print-directory -s`, alinhamento estético de variáveis e zero `@` redundante.
     - **Permissões Canônicas:** Aplicar 4 dígitos octais (`chmod 0755`, `chmod 0644`, `chmod 0700`, `chmod 0600`).
 
 ## 📖 Referências Obrigatórias
 
+Antes de qualquer modificação neste ecossistema, consulte:
+
 - **[ENVIRONMENT.md](ENVIRONMENT.md)**: Arquitetura global do ecossistema
-- **[PRINCIPLES.md](PRINCIPLES.md)**: Os 18 Princípios de Engenharia UNIX + Clean Code
+- **[PRINCIPLES.md](PRINCIPLES.md)**: Os 21 Princípios de Engenharia UNIX + Clean Code
 - **[.agents/rules/principles.md](.agents/rules/principles.md)**: Regras específicas para o Helix
 - **[.agents/skills/](.agents/skills/)**: Runbooks operacionais do Helix

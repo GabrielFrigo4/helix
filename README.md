@@ -3,8 +3,9 @@
 > Configuração declarativa, minimalista e ergonômica para o editor modal Helix.
 
 [![Environment](https://img.shields.io/badge/🏛️_Environment-Hub-blue)](https://github.com/GabrielFrigo4/environment)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![TOML](https://img.shields.io/badge/format-TOML_1.0-orange)](config.toml)
+[![Helix](https://img.shields.io/badge/Helix-Modal_Editor-black?logo=helix&logoColor=white)](https://helix-editor.com/)
+[![TOML](https://img.shields.io/badge/Format-TOML_1.0-orange?logo=toml&logoColor=white)](config.toml)
+[![License](https://img.shields.io/badge/License-MIT-green?logo=open-source-initiative&logoColor=white)](LICENSE)
 
 ---
 

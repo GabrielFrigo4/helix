@@ -27,6 +27,7 @@ O repositório provê configurações declarativas para o editor modal moderno *
 2. **Arquitetura de Comentários em 3 Camadas:** Mantenha cabeçalho de 64 `-` (`# ----...`), seções de 32 `=` (`### ====...`) e subseções de 32 `-` (`### ----...`).
 3. **Fail-Safe Defaults:** Configurações de LSP e linters devem funcionar sem quebrar a edição básica de texto mesmo quando servidores LSP não estão no PATH.
 4. **Zero Secrets:** Nunca incluir tokens ou segredos neste repositório.
+5. **Hermetismo de Produção & Invariante `rm -rf .agents`:** Repositório 100% autônomo. Zero acoplamento de configurações a `.agents/` ou `skills/` (o Helix opera plenamente se `.agents/` for deletado).
 
 ---
 

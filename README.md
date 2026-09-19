@@ -6,6 +6,7 @@
 [![Helix](https://img.shields.io/badge/Helix-Modal_Editor-black?logo=helix&logoColor=white)](https://helix-editor.com/)
 [![TOML](https://img.shields.io/badge/Format-TOML_1.0-orange?logo=toml&logoColor=white)](config.toml)
 [![License](https://img.shields.io/badge/License-MIT-green?logo=open-source-initiative&logoColor=white)](LICENSE)
+[![Roadmap](https://img.shields.io/badge/🗺️_Roadmap-TODO.md-teal)](TODO.md)
 
 ---
 
@@ -24,6 +25,7 @@ Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo
 
 | Arquivo                            | Descrição                                                         |
 | :--------------------------------- | :---------------------------------------------------------------- |
+| [`TODO.md`](TODO.md)               | Roadmap estratégico, matriz de status e backlog de evolução       |
 | [`helix.sh`](helix.sh)             | Interface unificada de componente (CLI para test, doctor, update) |
 | [`config.toml`](config.toml)       | Configuração principal do editor, tema visual, cursor e teclas    |
 | [`languages.toml`](languages.toml) | Definição de indentação e servidores por linguagem                |

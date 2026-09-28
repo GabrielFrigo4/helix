@@ -6,6 +6,17 @@ set -eu
 
 _HELIX_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
+_self_heal_perms() {
+	if [ -d "${_HELIX_ROOT}/.git" ] && command -v git > "/dev/null" 2>&1; then
+		git -C "${_HELIX_ROOT}" config core.hooksPath .githooks 2> "/dev/null" || true
+	fi
+	if [ -d "${_HELIX_ROOT}/.githooks" ]; then
+		chmod 0755 "${_HELIX_ROOT}/.githooks/"* 2> "/dev/null" || true
+	fi
+	[ -f "${_HELIX_ROOT}/helix.sh" ] && chmod 0755 "${_HELIX_ROOT}/helix.sh" 2> "/dev/null" || true
+}
+_self_heal_perms
+
 _helix_help() {
 	cat <<- EOF
 		Helix — Interface Unificada de Componente

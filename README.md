@@ -7,6 +7,7 @@
 [![TOML](https://img.shields.io/badge/Format-TOML_1.0-orange?logo=toml&logoColor=white)](config.toml)
 [![License](https://img.shields.io/badge/License-MIT-green?logo=open-source-initiative&logoColor=white)](LICENSE)
 [![Roadmap](https://img.shields.io/badge/🗺️_Roadmap-TODO.md-teal)](TODO.md)
+[![Contributing](https://img.shields.io/badge/🤝_Contributing-CONTRIBUTING.md-orange)](CONTRIBUTING.md)
 
 ---
 
@@ -23,15 +24,16 @@ Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo
 
 ## 📁 Catálogo da Estrutura
 
-| Arquivo                            | Descrição                                                         |
-| :--------------------------------- | :---------------------------------------------------------------- |
-| [`TODO.md`](TODO.md)               | Roadmap estratégico, matriz de status e backlog de evolução       |
-| [`helix.sh`](helix.sh)             | Interface unificada de componente (CLI para test, doctor, update) |
-| [`config.toml`](config.toml)       | Configuração principal do editor, tema visual, cursor e teclas    |
-| [`languages.toml`](languages.toml) | Definição de indentação e servidores por linguagem                |
-| [`AGENTS.md`](AGENTS.md)           | Briefing arquitetural para agentes de inteligência artificial     |
-| [`PRINCIPLES.md`](PRINCIPLES.md)   | Os 18 Princípios de Engenharia UNIX + Clean Code                  |
-| [`ENVIRONMENT.md`](ENVIRONMENT.md) | Manifesto do ecossistema Universal Environment                    |
+| Arquivo                              | Descrição                                                         |
+| :----------------------------------- | :---------------------------------------------------------------- |
+| [`TODO.md`](TODO.md)                 | Roadmap estratégico, matriz de status e backlog de evolução       |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guia de contribuição, configuração de ganchos Git e quality gates |
+| [`helix.sh`](helix.sh)               | Interface unificada de componente (CLI para test, doctor, update) |
+| [`config.toml`](config.toml)         | Configuração principal do editor, tema visual, cursor e teclas    |
+| [`languages.toml`](languages.toml)   | Definição de indentação e servidores por linguagem                |
+| [`AGENTS.md`](AGENTS.md)             | Briefing arquitetural para agentes de inteligência artificial     |
+| [`PRINCIPLES.md`](PRINCIPLES.md)     | Os 18 Princípios de Engenharia UNIX + Clean Code                  |
+| [`ENVIRONMENT.md`](ENVIRONMENT.md)   | Manifesto do ecossistema Universal Environment                    |
 
 ---
 
@@ -102,3 +104,17 @@ make deploy
 # Verificar diagnóstico completo do Helix
 hx --health
 ```
+
+---
+
+## 🚀 Setup do Projeto & Ganchos Git
+
+Para configurar o ambiente de desenvolvimento local, ativar os quality gates automáticos e validar a integridade do repositório:
+
+```sh
+make hooks   # Configura .githooks e permissões canônicas
+make test    # Valida sintaxe TOML (config.toml, languages.toml)
+make ci      # Bateria completa de validação local
+```
+
+> 🤝 **Instruções Detalhadas:** Consulte o [CONTRIBUTING.md](CONTRIBUTING.md) para convenções de commits, especificações de configuração TOML e quality gates.

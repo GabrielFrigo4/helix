@@ -7,7 +7,7 @@ MAKEFLAGS += --no-print-directory -s
 # Makefile: Helix Modal Editor
 # ----------------------------------------------------------------
 
-.PHONY: help hooks test check-toml ci
+.PHONY: help hooks test check-toml format prettier ci
 
 ### ================================
 ### HELP & DOCUMENTATION
@@ -22,6 +22,8 @@ help:
 	cmd "hooks"          "Configura e aplica permissões canônicas em .githooks"; \
 	sec "Qualidade & Validação:"; \
 	cmd "test"           "Valida sintaxe de todos os arquivos TOML"; \
+	cmd "format"         "Formata documentações Markdown com Prettier"; \
+	cmd "prettier"       "Formata documentações Markdown com Prettier"; \
 	cmd "ci"             "Executa suíte de validação local do Helix"; \
 	echo ""
 
@@ -43,6 +45,17 @@ test: check-toml
 check-toml:
 	echo "🧪 Validando sintaxe TOML do Helix..."
 	python3 -c "import tomllib; tomllib.loads(open('config.toml').read()); tomllib.loads(open('languages.toml').read())" && echo "  ✅ Helix: TOML 100% válido"
+
+format: prettier
+	echo "✅ Formatação concluída!"
+
+prettier:
+	echo "🎨 Formatando documentações Markdown com Prettier..."
+	if command -v prettier > "/dev/null" 2>&1; then \
+		prettier --write "**/*.md" 2> "/dev/null" || true; \
+	elif command -v npx > "/dev/null" 2>&1; then \
+		npx prettier --write "**/*.md" 2> "/dev/null" || true; \
+	fi
 
 ci: test
 	echo "🚀 Helix 100% pronto para produção!"

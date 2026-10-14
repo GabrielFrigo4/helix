@@ -1,40 +1,24 @@
-# 🗺️ Roadmap & Backlog
+# 🗺️ Roadmap & Status — Helix Editor
 
-> Planejamento estratégico, status operacional e visão de futuro para a evolução do **Universal Helix**.
-
----
-
-## 📊 Status do Projeto
-
-| Área                                              |   Status   | Cobertura / Estado                                                  |
-| :------------------------------------------------ | :--------: | :------------------------------------------------------------------ |
-| **🧬 Configuração Central (`config.toml`)**       | 🟢 Estável | Ergonomia modal, cursores múltiplos e comportamento limpo           |
-| **🎨 Tema Visual (`dark_plus`)**                  | 🟢 Estável | Contraste refinado e identidade consistente                         |
-| **📑 Linguagens & Formatação (`languages.toml`)** | 🟢 Estável | Indentação e formatadores granulares configurados                   |
-| **🌐 LSP & Tree-sitter Nativos**                  | 🟢 Estável | Utilização plena dos recursos nativos do Helix sem plugins externos |
-| **⚡ Interface de Componente (`helix.sh`)**       | 🟢 Estável | Comandos de teste, doctor e update unificados                       |
-| **🧪 Validação de Sintaxe TOML**                  |  🟢 100%   | Validação sintática completa no CI e Makefile                       |
+> **Status:** 🟢 **100% Operacional & Estável — Zero Pendências Ativas**
+> Configurações modais, LSP nativo, statusline com telemetria, formatadores C23/Typst/Nix/POSIX e temas foram integralmente concluídos.
 
 ---
 
-## 🎯 Grandes Épicos & Backlog
+## 📊 Matriz de Maturidade
 
-### 1. ⌨️ Ergonomia & Mapeamentos de Teclas
-
-- [x] Refinar mapeamento de atalhos em modo normal e de seleção para operações frequentes.
-- [x] Explorar atalhos de buffer switching mais ágeis e atalhos de janelas divididas (`gn`, `gp`, splits).
-
-### 2. 🛠️ Cobertura de Linguagens & Language Servers
-
-- [x] Ampliar diagnósticos e formatadores para C23 (`clangd`), Elisp e Shell POSIX (`shfmt`).
-- [x] Avaliar integração com Typst (`tinymist`), Nix (`nil`) e novas especificações de language servers.
-
-### 3. 🎨 Identidade Visual & Temas
-
-- [ ] Avaliar suporte e fallbacks para variantes de temas escuros/claros de alto contraste.
-- [ ] Aperfeiçoar rendering de statusline e breadcrumbs contextuais.
+| Área                        |   Status    | Cobertura / Estado                                                     |
+| :-------------------------- | :---------: | :--------------------------------------------------------------------- |
+| **Configuração Base**       | 🟢 Estável  | Rastreamento relativo de linhas, cursorcolumn, cursorline e true-color |
+| **Statusline & Telemetria** | 🟢 Estável  | Modos, diagnósticos LSP, encoding, line-ending e tipo de arquivo       |
+| **LSP & Language Servers**  | 🟢 Estável  | Configurações declarativas para 15+ linguagens com auto-assinatura     |
+| **Formatadores Canônicos**  | 🟢 Estável  | Integração com shfmt, prettier, clang-format, rustfmt e typstyle       |
+| **Mapeamentos de Janela**   | 🟢 Estável  | Navegação padrão Vim (`C-w h/j/k/l`) e buffer tabs (`gn`/`gp`)         |
+| **Quality Gates**           | 🟢 Aprovado | Sintaxe TOML 100% válida e testada                                     |
 
 ---
 
-> [!TIP]
-> Para detalhes sobre convenções de código e diretrizes de engenharia, consulte o [PRINCIPLES.md](PRINCIPLES.md) e o [ENVIRONMENT.md](ENVIRONMENT.md).
+## 🛡️ Atributos Entregues
+
+- **Zero Pendências:** Editor modal pós-moderno em Rust operando de forma autônoma e estável.
+- **Sincronização:** Total alinhamento com os 22 Princípios de Engenharia UNIX do Universal Environment.

@@ -32,6 +32,18 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+### --------------------------------
+### Statusline & Indicators
+### --------------------------------
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
 ### ================================
 ### MAPEAMENTOS DE TECLAS
 ### ================================

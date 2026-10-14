@@ -21,13 +21,13 @@
 
 ### 1. ⌨️ Ergonomia & Mapeamentos de Teclas
 
-- [ ] Refinar mapeamento de atalhos em modo normal e de seleção para operações frequentes.
-- [ ] Explorar atalhos de buffer switching mais ágeis e atalhos de janelas divididas.
+- [x] Refinar mapeamento de atalhos em modo normal e de seleção para operações frequentes.
+- [x] Explorar atalhos de buffer switching mais ágeis e atalhos de janelas divididas (`gn`, `gp`, splits).
 
 ### 2. 🛠️ Cobertura de Linguagens & Language Servers
 
-- [ ] Ampliar diagnósticos e formatadores para C23 (`clangd`), Elisp e Shell POSIX.
-- [ ] Avaliar integração com Typst, Nix e novas especificações de language servers.
+- [x] Ampliar diagnósticos e formatadores para C23 (`clangd`), Elisp e Shell POSIX (`shfmt`).
+- [x] Avaliar integração com Typst (`tinymist`), Nix (`nil`) e novas especificações de language servers.
 
 ### 3. 🎨 Identidade Visual & Temas
 

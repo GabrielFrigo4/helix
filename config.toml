@@ -18,8 +18,8 @@ mouse = true
 ### Language Server Protocol
 ### --------------------------------
 [editor.lsp]
-auto-signature-help = false
-enable = false
+auto-signature-help = true
+enable = true
 
 ### --------------------------------
 ### Cursor & File Picker
@@ -38,6 +38,23 @@ hidden = false
 [keys.normal]
 del = "delete_char_forward"
 backspace = "delete_char_backward"
+"C-h" = "jump_view_left"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+"C-l" = "jump_view_right"
+
+[keys.normal.g]
+n = "goto_next_buffer"
+p = "goto_previous_buffer"
+
+[keys.normal."C-w"]
+h = "jump_view_left"
+j = "jump_view_down"
+k = "jump_view_up"
+l = "jump_view_right"
+s = "hsplit"
+v = "vsplit"
+q = "wclose"
 
 [keys.select]
 del = "delete_selection"

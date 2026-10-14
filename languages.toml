@@ -3,16 +3,36 @@
 # ----------------------------------------------------------------
 
 ### ================================
+### LANGUAGE SERVERS
+### ================================
+
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy", "--completion-style=detailed", "--header-insertion=iwyu", "--fallback-style=llvm"]
+
+[language-server.tinymist]
+command = "tinymist"
+
+[language-server.nil]
+command = "nil"
+
+### ================================
 ### LANGUAGES
 ### ================================
 
 [[language]]
 name = "c"
+language-servers = ["clangd"]
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "clang-format" }
 
 [[language]]
 name = "cpp"
+language-servers = ["clangd"]
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "clang-format" }
 
 [[language]]
 name = "c-sharp"
@@ -20,14 +40,17 @@ indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "rust"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "zig"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "go"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
@@ -36,10 +59,12 @@ indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "python"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "lua"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
@@ -48,6 +73,7 @@ indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "javascript"
+auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
@@ -58,9 +84,28 @@ indent = { tab-width = 4, unit = "\t" }
 name = "css"
 indent = { tab-width = 4, unit = "\t" }
 
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "nix"
+language-servers = ["nil"]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
 ### ================================
-### TOOLS
+### TOOLS & SHELL
 ### ================================
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+auto-format = true
+indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "shfmt", args = ["-i", "0", "-s", "-ci"] }
 
 [[language]]
 name = "org"
@@ -75,10 +120,6 @@ name = "cmake"
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
-name = "bash"
-indent = { tab-width = 4, unit = "\t" }
-
-[[language]]
 name = "fish"
 indent = { tab-width = 4, unit = "\t" }
 
@@ -87,7 +128,7 @@ name = "powershell"
 indent = { tab-width = 4, unit = "\t" }
 
 ### ================================
-### MARKUP
+### MARKUP & DATA
 ### ================================
 
 [[language]]

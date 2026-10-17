@@ -11,6 +11,7 @@
 | :-------------------------- | :---------: | :--------------------------------------------------------------------- |
 | **Configuração Base**       | 🟢 Estável  | Rastreamento relativo de linhas, cursorcolumn, cursorline e true-color |
 | **Statusline & Telemetria** | 🟢 Estável  | Modos, diagnósticos LSP, encoding, line-ending e tipo de arquivo       |
+| **Console TTY & Cores**     | 🟢 Estável  | Degradação crossterm para ANSI 16 cores e suporte a mouse no console   |
 | **LSP & Language Servers**  | 🟢 Estável  | Configurações declarativas para 15+ linguagens com auto-assinatura     |
 | **Formatadores Canônicos**  | 🟢 Estável  | Integração com shfmt, prettier, clang-format, rustfmt e typstyle       |
 | **Mapeamentos de Janela**   | 🟢 Estável  | Navegação padrão Vim (`C-w h/j/k/l`) e buffer tabs (`gn`/`gp`)         |

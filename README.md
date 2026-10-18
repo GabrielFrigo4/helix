@@ -15,7 +15,7 @@
 
 Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo, integrando a **Suíte de Editores** do [Universal Environment](https://github.com/GabrielFrigo4/environment). A configuração foca em:
 
-- **Ergonomia Modal Pós-Moderna:** Mapeamento intuitivo de cursores e seleções.
+- **Ergonomia Modal Pós-Moderna:** Mapeamento intuitivo de cursores e seleções, com formas declarativas em PTYs gráficos (`bar`, `block`, `underline`) e auto-cura para bloco sólido estático no Linux TTY (`\e%G\e[?16;238;0c`).
 - **Tema dark_plus:** Contraste visual equilibrado e confortável.
 - **Formatação Granular de Linguagens:** Indentação padronizada por tabs e espaços em `languages.toml`.
 - **Zero Config Bloat:** Dependência zero de plugins externos, aproveitando o LSP e tree-sitter nativos do Helix.

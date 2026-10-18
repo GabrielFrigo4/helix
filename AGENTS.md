@@ -32,6 +32,7 @@ O repositório provê configurações declarativas para o editor modal moderno *
 7. **Invariante de Clonagem "Out-of-the-Box" (Zero-Tweaks Git Invariant):** O Helix deve funcionar imediatamente após `git clone`. Modos octais no Git Index DEVEM ser rigorosamente `0755` para `helix.sh` e hooks, e `0644` para arquivos `.toml` e documentações.
 8. **Governança de Roadmap (Opção C):** O repositório mantém seu [TODO.md](TODO.md) atualizado com a Matriz de Status e Backlog de Evolução, sincronizado com o badge no `README.md`.
 9. **Refatoração Sem Legado / Soberania Monousuário (Clean-Break / Zero-Cruft Invariant):** O ecossistema é estritamente pessoal, governado e operado por um único desenvolvedor soberano (Gabriel Frigo). Evite manter resíduos de retrocompatibilidade, shims temporários, wrappers obsoletos, seções de compatibilidade legada ou aliases de transição ao renomear variáveis, comandos, funções, diretórios ou arquivos, salvo se expressamente ordenado pelo usuário. Toda refatoração deve ser atômica, direta, definitiva e limpa (_clean break_), expurgando o identificador antigo integralmente da base de código.
+10. **Ergonomia de Cursor (PTY vs Linux TTY):** O Helix gerencia o formato do cursor via `[editor.cursor-shape]` em `config.toml` (DECSCUSR em PTYs gráficos) e opera com bloco sólido em consoles virtuais Linux TTY, com o retorno ao shell sendo auto-curado pelo wrapper `hx()` no Universal Shell (`\e%G\e[?16;238;0c`).
 
 ---
 

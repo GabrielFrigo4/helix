@@ -16,6 +16,9 @@ Este runbook orienta desenvolvedores e agentes de inteligência artificial na ma
     - `config.toml`: Preferências gerais do editor, esquema de cores/tema (`theme = "dark_plus"`), estilo de cursor, réguas visuais e mapeamentos ergonômicos de teclas.
     - `languages.toml`: Definições granulares de indentação (tabs vs espaços, tab-width) e servidores de linguagem por extensão.
 3. **Zero Symlinks Manuais:** O repositório opera como clone soberano em `${HOME}/.config/helix` (Unix/MSYS2) ou `%APPDATA%\helix` (Windows).
+4. **Ergonomia de Cursor Adaptativa (PTY vs Linux TTY):**
+    - **Em PTY Gráfico:** Configurado declarativamente via `[editor.cursor-shape]` (`normal = "block"`, `insert = "bar"`, `select = "underline"`) operando via sequências de controle DECSCUSR.
+    - **Em Linux Console TTY:** O driver VT opera com bloco sólido em modo texto, sendo o cursor auto-curado de forma idempotente pelo wrapper `hx()` no Universal Shell (`\e%G\e[?16;238;0c`).
 
 ---
 

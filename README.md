@@ -17,6 +17,7 @@ Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo
 
 - **Ergonomia Modal Pós-Moderna:** Mapeamento intuitivo de cursores e seleções, com formas declarativas em PTYs gráficos (`bar`, `block`, `underline`) e auto-cura para bloco sólido estático no Linux TTY (`\e%G\e[?16;238;0c`).
 - **Tema dark_plus:** Contraste visual equilibrado e confortável.
+- **Tipografia Homologada:** Projetado e calibrado para **`JetBrainsMono Nerd Font`** (versão 3.x+), garantindo renderização nítida de statusline, seleções múltiplas e diagnósticos de código.
 - **Formatação Granular de Linguagens:** Indentação padronizada por tabs e espaços em `languages.toml`.
 - **Zero Config Bloat:** Dependência zero de plugins externos, aproveitando o LSP e tree-sitter nativos do Helix.
 

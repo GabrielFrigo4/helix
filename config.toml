@@ -53,6 +53,13 @@ backspace = "delete_char_backward"
 "C-j" = "jump_view_down"
 "C-k" = "jump_view_up"
 "C-l" = "jump_view_right"
+"A-]" = "rotate_view"
+"A-[" = "file_picker_in_current_directory"
+"C-\\" = "file_picker_in_current_directory"
+"C-p" = "file_picker"
+"C-f" = "file_picker"
+"C-b" = "buffer_picker"
+"C-g" = "global_search"
 
 [keys.normal.g]
 n = "goto_next_buffer"

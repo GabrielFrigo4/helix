@@ -34,7 +34,7 @@ _helix_help() {
 _helix_test() {
 	echo "🧪 [Helix] Validando sintaxe TOML..."
 	if command -v python3 > "/dev/null" 2>&1; then
-		python3 -c "import tomllib; tomllib.loads(open('${_HELIX_ROOT}/config.toml').read()); tomllib.loads(open('${_HELIX_ROOT}/languages.toml').read())" && echo "  ✅ Helix: TOML 100% válido"
+		python3 -c "import glob, tomllib; [tomllib.load(open(f, 'rb')) for f in glob.glob('${_HELIX_ROOT}/**/*.toml', recursive=True)]" && echo "  ✅ Helix: TOML 100% válido"
 	else
 		echo "ℹ️  Python3 não encontrado para validação TOML."
 	fi

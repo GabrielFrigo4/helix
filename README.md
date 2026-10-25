@@ -15,8 +15,8 @@
 
 Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo, integrando a **Suíte de Editores** do [Universal Environment](https://github.com/GabrielFrigo4/environment). A configuração foca em:
 
-- **Ergonomia Modal Pós-Moderna:** Mapeamento intuitivo de cursores e seleções, com formas declarativas em PTYs gráficos (`bar`, `block`, `underline`) e auto-cura para bloco sólido estático no Linux TTY (`\e%G\e[?16;238;0c`).
-- **Tema dark_plus:** Contraste visual equilibrado e confortável.
+- **Ergonomia Modal & Simetria Tri-Modal:** Em PTYs gráficos, formas declarativas (`bar`, `block`, `underline`) com alpha-blending monocromático calibrado (`100%`, `92%`, `68%`). Em Raw TTY (16 cores), comutação automática via wrapper `hx` para `config-tty.toml` (`term16_dark`, `true-color = false`, cursor sólido em software com tons 16-cores imune a inversões).
+- **Temas dark_plus & term16_dark:** Contraste visual equilibrado em PTY 24-bit e paleta ANSI de 16 cores calibrada para consoles puros de kernel (FreeBSD `vt(4)` e Linux VT).
 - **Tipografia Homologada:** Projetado e calibrado para **`JetBrainsMono Nerd Font`** (versão 3.x+), garantindo renderização nítida de statusline, seleções múltiplas e diagnósticos de código.
 - **Formatação Granular de Linguagens:** Indentação padronizada por tabs e espaços em `languages.toml`.
 - **Zero Config Bloat:** Dependência zero de plugins externos, aproveitando o LSP e tree-sitter nativos do Helix.
@@ -25,16 +25,18 @@ Este repositório contém a configuração oficial do **Helix** de Gabriel Frigo
 
 ## 📁 Catálogo da Estrutura
 
-| Arquivo                              | Descrição                                                         |
-| :----------------------------------- | :---------------------------------------------------------------- |
-| [`TODO.md`](TODO.md)                 | Roadmap estratégico, matriz de status e backlog de evolução       |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guia de contribuição, configuração de ganchos Git e quality gates |
-| [`helix.sh`](helix.sh)               | Interface unificada de componente (CLI para test, doctor, update) |
-| [`config.toml`](config.toml)         | Configuração principal do editor, tema visual, cursor e teclas    |
-| [`languages.toml`](languages.toml)   | Definição de indentação e servidores por linguagem                |
-| [`AGENTS.md`](AGENTS.md)             | Briefing arquitetural para agentes de inteligência artificial     |
-| [`PRINCIPLES.md`](PRINCIPLES.md)     | Os 22 Princípios de Engenharia UNIX + Clean Code                  |
-| [`ENVIRONMENT.md`](ENVIRONMENT.md)   | Manifesto do ecossistema Universal Environment                    |
+| Arquivo                              | Descrição                                                                |
+| :----------------------------------- | :----------------------------------------------------------------------- |
+| [`TODO.md`](TODO.md)                 | Roadmap estratégico, matriz de status e backlog de evolução              |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guia de contribuição, configuração de ganchos Git e quality gates        |
+| [`helix.sh`](helix.sh)               | Interface unificada de componente (CLI para test, doctor, update)        |
+| [`config.toml`](config.toml)         | Configuração principal do editor para PTY/GUI 24-bit, cursor e atalhos   |
+| [`config-tty.toml`](config-tty.toml) | Configuração soberana de console Raw TTY (16 cores ANSI, sem true-color) |
+| [`themes/`](themes/)                 | Temas calibrados (`dark_plus.toml` e `term16_dark.toml`) sem inversão    |
+| [`languages.toml`](languages.toml)   | Definição de indentação e servidores por linguagem                       |
+| [`AGENTS.md`](AGENTS.md)             | Briefing arquitetural para agentes de inteligência artificial            |
+| [`PRINCIPLES.md`](PRINCIPLES.md)     | Os 22 Princípios de Engenharia UNIX + Clean Code                         |
+| [`ENVIRONMENT.md`](ENVIRONMENT.md)   | Manifesto do ecossistema Universal Environment                           |
 
 ---
 

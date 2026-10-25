@@ -44,7 +44,7 @@ test: check-toml
 
 check-toml:
 	echo "🧪 Validando sintaxe TOML do Helix..."
-	python3 -c "import tomllib; tomllib.loads(open('config.toml').read()); tomllib.loads(open('languages.toml').read())" && echo "  ✅ Helix: TOML 100% válido"
+	python3 -c "import glob, tomllib; [tomllib.load(open(f, 'rb')) for f in glob.glob('**/*.toml', recursive=True)]" && echo "  ✅ Helix: TOML 100% válido"
 
 format: prettier
 	echo "✅ Formatação concluída!"

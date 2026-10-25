@@ -92,8 +92,8 @@ fi
 if command -v python3 > "/dev/null" 2>&1; then
 	echo "  ↳ Validating TOML syntax with python3 tomllib..."
 	python3 -c "
-import sys, tomllib
-for f in ['config.toml', 'languages.toml']:
+import sys, glob, tomllib
+for f in glob.glob('**/*.toml', recursive=True):
     try:
         with open(f, 'rb') as fp:
             tomllib.load(fp)

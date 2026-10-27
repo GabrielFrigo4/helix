@@ -23,3 +23,12 @@
 
 - **Zero Pendências:** Editor modal pós-moderno em Rust operando de forma autônoma e estável.
 - **Sincronização:** Total alinhamento com os 22 Princípios de Engenharia UNIX do Universal Environment.
+
+---
+
+## 📌 Backlog & Próximos Passos
+
+---
+
+> [!TIP]
+> Para detalhes sobre a arquitetura e convenções de engenharia, consulte o [PRINCIPLES.md](PRINCIPLES.md) e o [ENVIRONMENT.md](ENVIRONMENT.md).

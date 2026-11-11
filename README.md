@@ -91,11 +91,15 @@ Remove-Item -Recurse -Force "$env:APPDATA\helix\.git*", "$env:APPDATA\helix\.age
 
 Quando operado a partir do [Universal Environment](https://github.com/GabrielFrigo4/environment):
 
-```sh
-# Atualizar a suíte de editores com o upstream
-make uped
+Atualizar a suíte de editores com o upstream:
 
-# Implantar o repositório no destino canônico (~/.config/helix)
+```sh
+make uped
+```
+
+Implantar o repositório no destino canônico (~/.config/helix):
+
+```sh
 make deploy
 ```
 
@@ -103,8 +107,9 @@ make deploy
 
 ### 🩺 Validação e Saúde
 
+Verificar diagnóstico completo do Helix:
+
 ```sh
-# Verificar diagnóstico completo do Helix
 hx --health
 ```
 

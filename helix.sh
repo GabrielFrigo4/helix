@@ -7,7 +7,7 @@ set -eu
 _HELIX_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
 _self_heal_perms() {
-	if [ -d "${_HELIX_ROOT}/.git" ] && command -v git > "/dev/null" 2>&1; then
+	if [ -e "${_HELIX_ROOT}/.git" ] && command -v git > "/dev/null" 2>&1; then
 		git -C "${_HELIX_ROOT}" config core.hooksPath .githooks 2> "/dev/null" || true
 	fi
 	if [ -d "${_HELIX_ROOT}/.githooks" ]; then

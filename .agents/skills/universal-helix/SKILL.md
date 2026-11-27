@@ -25,16 +25,11 @@ Este runbook orienta desenvolvedores e agentes de inteligência artificial na ma
 
 ## 🧪 1. Validação Sintática de Arquivos TOML
 
-Sempre valide a sintaxe dos arquivos `.toml` antes de efetuar commits ou concluir alterações:
+Sempre valide a sintaxe dos arquivos `.toml` pelo `Makefile` canônico, script unificado `./helix.sh` ou Python `tomllib`:
 
 ```sh
-# Via Makefile canônico
 make test
-
-# Ou via script unificado de componente
 ./helix.sh test
-
-# Ou diretamente via interpretador Python 3 (módulo tomllib nativo)
 python3 -c "import tomllib; tomllib.loads(open('config.toml').read()); tomllib.loads(open('languages.toml').read()); print('TOML OK')"
 ```
 
@@ -68,14 +63,11 @@ hx --health python
 
 ## 🚀 3. Sincronização & Deploy Soberano
 
-O repositório opera de forma autônoma ou coordenado pelo **Universal Environment**:
+O repositório opera de forma autônoma (clonagem direta para `~/.config/helix`) ou coordenado pelo **Universal Environment** (`make uped` atualiza a suíte e `make deploy` / `make install` sincroniza clones):
 
 ```sh
-# A partir do Universal Environment (orquestrador pai)
-make uped    # Atualiza a suite de editores com upstream
-make deploy  # Sincroniza clones nos destinos canonicos
-
-# Ou clonagem direta e limpa
+make uped
+make install
 git clone "https://github.com/GabrielFrigo4/helix.git" "${HOME}/.config/helix"
 ```
 
